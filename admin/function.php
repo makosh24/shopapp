@@ -1,11 +1,11 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "eshop";
+$username = "makosh24";
+$password = "Madi5234240795";
+$dbname = "shopapp";
 
 function connect(){
-    $conn = mysqli_connect("localhost", "root", "root", "eshop");
+    $conn = mysqli_connect("localhost", "makosh24", "Madi5234240795", "shopapp");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
