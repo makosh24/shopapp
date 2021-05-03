@@ -25,13 +25,18 @@ function selectGoods() {
     var id = $('.goods-out select option:selected').attr('data-id');
     console.log(id);
         $.post(
-        "core.php"
+        "core.php",
         {
-            "action" : "selectOneGoods"
+            "action" : "selectOneGoods",
             "gid" : id
         },
         function(data){
-
+            data = JSON.parse(data);
+            $('#gname').val(data.name);
+            $('#gcost').val(data.cost);
+            $('#gdescr').val(data.description);
+            $('#gimg').val(data.img);
+            $('#gid').val(data.id);
         }
     );
 }
