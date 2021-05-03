@@ -47,7 +47,7 @@ function selectOneGoods() {
 
 function updateGoods(){
     $conn = connect();
-    $id = $_POST['gid'];
+    $id = $_POST['id'];
     $name = $_POST['gname'];
     $cost = $_POST['gcost'];
     $descr = $_POST['gdescr'];
