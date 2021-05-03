@@ -42,6 +42,28 @@ function selectGoods() {
     );
 }
 
+function saveToDb() {
+    var id =$('#gid').val();
+    if (id!=undefined){
+        $.post(
+            "core.php",
+            {
+                "action" : "updateGoods",
+                "id" : id,
+                "gname" : $('#gname').val(),
+                "gcost" : $('#gcost').val(),
+                "gdescr" : $('#gdescr').val(),
+                "gorder" : $('#gorder').val(),
+                "gimg" : $('#gimg').val()
+            },
+            function(data){
+                console.log(data);
+            }
+        )
+    }
+}
+
 $(document).ready(function () {
    init();
+    $('.add-to-db').on('click', saveToDb);
 });
