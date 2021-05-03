@@ -24,7 +24,16 @@ function showGoods(data) {
 function selectGoods() {
     var id = $('.goods-out select option:selected').attr('data-id');
     console.log(id);
-//    ds
+        $.post(
+        "core.php"
+        {
+            "action" : "selectOneGoods"
+            "gid" : id
+        },
+        function(data){
+
+        }
+    );
 }
 
 $(document).ready(function () {
