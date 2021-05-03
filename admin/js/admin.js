@@ -22,7 +22,9 @@ function showGoods(data) {
 }
 
 function selectGoods() {
-    console.log(yes);
+    var id = $('.goods-out select option:selected').attr('data-id');
+    console.log(id);
+//    ds
 }
 
 $(document).ready(function () {
