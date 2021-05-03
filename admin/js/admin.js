@@ -35,6 +35,7 @@ function selectGoods() {
             $('#gname').val(data.name);
             $('#gcost').val(data.cost);
             $('#gdescr').val(data.description);
+            $('#gorder').val(data.ord);
             $('#gimg').val(data.img);
             $('#gid').val(data.id);
         }
