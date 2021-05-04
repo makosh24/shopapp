@@ -44,7 +44,7 @@ function selectGoods() {
 
 function saveToDb() {
     var id =$('#gid').val();
-    if (id!=undefined){
+    if (id!=""){
         $.post(
             "core.php",
             {
