@@ -76,7 +76,7 @@ function newGoods(){
     $img = $_POST['gimg'];
     
     $sql = "INSERT INTO goods (name, cost, description, ord, img)
-    VALUES ('$name', '$cost', '$descr', '$ord', $img')";
+    VALUES ('$name', '$cost', '$descr', '$ord', '$img')";
 
     if (mysqli_query($conn, $sql)) {
       echo "1";
