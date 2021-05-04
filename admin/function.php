@@ -57,9 +57,31 @@ function updateGoods(){
     $sql = "UPDATE goods SET name = '$name', cost = '$cost', description = '$descr', ord = '$ord', img = '$img' WHERE id = '$id'";
 
     if (mysqli_query($conn, $sql)) {
-      echo "Record updated successfully";
+      echo "1";
     } else {
       echo "Error updating record: " . mysqli_error($conn);
+    }
+
+    
+    mysqli_close($conn);
+}
+
+function newGoods(){
+    $conn = connect();
+    $id = $_POST['id'];
+    $name = $_POST['gname'];
+    $cost = $_POST['gcost'];
+    $descr = $_POST['gdescr'];
+    $ord = $_POST['gorder'];
+    $img = $_POST['gimg'];
+    
+    $sql = "INSERT INTO goods (name, cost, description, ord, img)
+    VALUES ('$name', '$cost', '$descr', '$ord', $img')";
+
+    if (mysqli_query($conn, $sql)) {
+      echo "1";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     

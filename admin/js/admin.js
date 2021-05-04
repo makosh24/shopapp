@@ -57,7 +57,33 @@ function saveToDb() {
                 "gimg" : $('#gimg').val()
             },
             function(data){
-                console.log(data);
+                if (data==1) {
+                    alert('Запись добавлена');
+                    init();
+                } else {
+                    console.log(data);
+                }
+            }
+        )
+    } else {
+        $.post(
+            "core.php",
+            {
+                "action" : "newGoods",
+                "id" : id,
+                "gname" : $('#gname').val(),
+                "gcost" : $('#gcost').val(),
+                "gdescr" : $('#gdescr').val(),
+                "gorder" : $('#gorder').val(),
+                "gimg" : $('#gimg').val()
+            },
+            function(data){
+                if (data==1) {
+                    alert('Запись добавлена');
+                    init();
+                } else {
+                    console.log(data);
+                }
             }
         )
     }
