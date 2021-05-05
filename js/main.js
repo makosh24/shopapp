@@ -59,7 +59,6 @@ function saveCart() {
 function showMiniCart(data) {
     //показываю мини корзину
     var out="";
-    data = JSON.parse(data);
     for (var key in cart) {
         out += data[key].name +' ---- '+ cart[key]+'<br>';
     }
