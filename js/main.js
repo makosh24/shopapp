@@ -55,7 +55,7 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart)); //корзину в строку
 }
 
-function showMiniCart(data) {
+function showMiniCart() {
     //показываю мини корзину
     var out="";
     for (var key in cart) {
