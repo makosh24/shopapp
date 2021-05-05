@@ -55,11 +55,11 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart)); //корзину в строку
 }
 
-function showMiniCart() {
+function showMiniCart(data) {
     //показываю мини корзину
     var out="";
     for (var key in cart) {
-        out += cart[key].name +' --- '+ cart[key]+'<br>';
+        out += data[key].name +' --- '+ cart[key]+'<br>';
     }
     $('.mini-cart').html(out);
 }
