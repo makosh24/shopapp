@@ -64,7 +64,7 @@ function updateGoods(){
 
     
     mysqli_close($conn);
-    writeJSON();
+//    writeJSON();
 }
 
 function newGoods(){
@@ -87,10 +87,10 @@ function newGoods(){
 
     
     mysqli_close($conn);
-    writeJSON();
+//    writeJSON();
 }
 
-function writeJSON() {
+/*function writeJSON() {
     $conn = connect();
     $sql = "SELECT * FROM goods";
     $result = mysqli_query($conn, $sql);
@@ -105,5 +105,21 @@ function writeJSON() {
         echo "0";
     }
     mysqli_close($conn);
-    
+}*/
+
+function loadGoods(){
+    $conn = connect();
+    $sql = "SELECT * FROM goods";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $out = array();
+        while($row = mysqli_fetch_assoc($result)) {
+            $out[$row["id"]] = $row;
+        }
+        echo json_encode($out));
+    } else {
+        echo "0";
+    }
+    mysqli_close($conn);
 }
