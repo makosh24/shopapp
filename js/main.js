@@ -1,5 +1,5 @@
 var cart = {}; // корзина
-var data1 = JSON.parse(data);
+
 
 function init() {
     //вычитуем файл goods.json
@@ -56,11 +56,12 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart)); //корзину в строку
 }
 
-function showMiniCart() {
+function showMiniCart(data) {
     //показываю мини корзину
     var out="";
+    data = JSON.parse(data);
     for (var key in cart) {
-        out += data1[key].name +' --- '+ cart[key]+'<br>';
+        out += data[key].name +' ---- '+ cart[key]+'<br>';
     }
     $('.mini-cart').html(out);
 }
