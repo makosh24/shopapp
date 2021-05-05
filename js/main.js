@@ -1,4 +1,5 @@
 var cart = {}; // корзина
+var data1 = JSON.parse(data);
 
 function init() {
     //вычитуем файл goods.json
@@ -59,7 +60,7 @@ function showMiniCart() {
     //показываю мини корзину
     var out="";
     for (var key in cart) {
-        out += data[key].name +' --- '+ cart[key]+'<br>';
+        out += data1[key].name +' --- '+ cart[key]+'<br>';
     }
     $('.mini-cart').html(out);
 }
