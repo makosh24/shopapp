@@ -14,6 +14,7 @@ function init() {
 
 function goodsOut(data) {
     // вывод на страницу
+    data = JSON.parse(data);
     console.log(data);
     var out='';
     for (var key in data) {
