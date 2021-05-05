@@ -59,7 +59,7 @@ function showMiniCart() {
     //показываю мини корзину
     var out="";
     for (var key in cart) {
-        out += key +' --- '+ cart[key]+'<br>';
+        out += cart[key].name +' --- '+ cart[key]+'<br>';
     }
     $('.mini-cart').html(out);
 }
