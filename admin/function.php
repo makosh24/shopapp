@@ -117,7 +117,7 @@ function loadGoods(){
         while($row = mysqli_fetch_assoc($result)) {
             $out[$row["id"]] = $row;
         }
-        echo json_encode($out));
+        echo json_encode($out);
     } else {
         echo "0";
     }
