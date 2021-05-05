@@ -60,7 +60,7 @@ function showMiniCart(data) {
     //показываю мини корзину
     var out="";
     for (var key in cart) {
-        out += data[key].name +' ---- '+ cart[key]+'<br>';
+        out += key +' ---- '+ cart[key]+'<br>';
     }
     $('.mini-cart').html(out);
 }
