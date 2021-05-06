@@ -39,7 +39,7 @@ function showCart() {
             $('.del-goods').on('click', delGoods);
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
-        }););
+        }));
     }
 }
 
