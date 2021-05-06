@@ -22,7 +22,7 @@ function showCart() {
             {
                 "action" : "loadGoods"
             }, goodsOutCart
-        )
+        );
     }
 }
             
