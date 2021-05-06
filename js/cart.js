@@ -22,7 +22,7 @@ function showCart() {
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            }, function (data)) {
+            }, function (data) {
             var goods = data;
             var out = '';
             for (var id in cart) {
@@ -34,7 +34,7 @@ function showCart() {
                 out += `  <button data-id="${id}" class="plus-goods">+</button>  `;
                 out += cart[id]*goods[id].cost;
                 out += '<br>';
-            }
+            });
             $('.main-cart').html(out);
             $('.del-goods').on('click', delGoods);
             $('.plus-goods').on('click', plusGoods);
