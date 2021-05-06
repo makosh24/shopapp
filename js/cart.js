@@ -22,7 +22,7 @@ function showCart() {
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            }, function (data)); {
+            }, function (data) {
             var goods = data;
             var out = '';
             for (var id in cart) {
@@ -39,7 +39,7 @@ function showCart() {
             $('.del-goods').on('click', delGoods);
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
-        });
+        }););
     }
 }
 
