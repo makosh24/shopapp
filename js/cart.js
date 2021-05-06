@@ -18,10 +18,11 @@ function showCart() {
     }
     else {
         $.getJSON(
+            $.post(
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            }, function (data) {
+            }), function (data) {
             var goods = data;
             var out = '';
             for (var id in cart) {
