@@ -27,6 +27,7 @@ function showCart() {
 }
             
 function goodsOut1(data) {
+    data = JSON.parse(data);
     var goods = data;
     var out = '';
     for (var id in cart) {
