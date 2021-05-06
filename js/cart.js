@@ -17,7 +17,7 @@ function showCart() {
         $('.main-cart').html('Корзина пуста!');
     }
     else {
-        $.post(
+        $.getJSON(
             "admin/core.php",
             {
                 "action" : "loadGoods"
