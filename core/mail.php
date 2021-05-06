@@ -4,7 +4,7 @@ $json = file_get_contents($.post(
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            });
+            }, goodsOut);
 $json = json_decode($json, true);
 
 //письмо
