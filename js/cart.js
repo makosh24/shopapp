@@ -18,7 +18,6 @@ function showCart() {
     }
     else {
         $.getJSON(
-            $.post
             "admin/core.php",
             {
                 "action" : "loadGoods"
