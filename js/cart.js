@@ -21,18 +21,18 @@ function showCart() {
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            }, goodsOut1
+            }, goodsOutCart
         );
     }
 }
             
-function goodsOut1(data) {
+function goodsOutCart(data) {
     data = JSON.parse(data);
     var goods = data;
     var out = '';
     for (var id in cart) {
         out += `<button data-id="${id}" class="del-goods">x</button>`;
-        out += `<img src="images\\${goods[id].img}">`;
+        out += `<img src="images\\${goods[id].img}" width="48">`;
         out += ` ${goods[id].name  }`;
         out += `  <button data-id="${id}" class="minus-goods">-</button>  `;
         out += ` ${cart[id]}  `;
