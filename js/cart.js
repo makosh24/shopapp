@@ -17,16 +17,16 @@ function showCart() {
         $('.main-cart').html('Корзина пуста!');
     }
     else {
-        $.getJSON(
+        $.post(
             "admin/core.php",
             {
                 "action" : "loadGoods"
-            }, goodsOutCart
+            }, goodsOut1
         );
     }
 }
             
-function goodsOutCart(data) {
+function goodsOut1(data) {
     var goods = data;
     var out = '';
     for (var id in cart) {
