@@ -17,14 +17,12 @@ function showCart() {
         $('.main-cart').html('Корзина пуста!');
     }
     else {
-        $.getJSON(
-            $.post(
-                "admin/core.php",
-                {
-                    "action" : "loadGoods"
-                }, goodsOutCart
-            )
-        );
+        $.post(
+            "admin/core.php",
+            {
+                "action" : "loadGoods"
+            }, goodsOutCart
+        )
     }
 }
             
