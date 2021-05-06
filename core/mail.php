@@ -1,6 +1,10 @@
 <?php
 // читать json файл
-$json = file_get_contents('../goods.json');
+$json = file_get_contents($.post(
+            "admin/core.php",
+            {
+                "action" : "loadGoods"
+            });
 $json = json_decode($json, true);
 
 //письмо
