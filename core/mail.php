@@ -1,7 +1,7 @@
 <?php
 // читать json файл
 $json = file_get_contents($.post(
-            "admin/core.php",
+            "../admin/core.php",
             {
                 "action" : "loadGoods"
             }, goodsOut);
